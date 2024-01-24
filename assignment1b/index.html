@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <form id = "registrationForm">
+            <h1>User Registration</h1>
+            <label for ="username"> Username:</label>
+            <input type="text" id="username" required>
+
+            <label for ="email"> Email:</label>
+            <input type="email" id="email" required>
+
+            <label for ="mobile"> Mobile number:</label>
+            <input type="number" id="mobile" required>
+
+            <label for ="password"> Password:</label>
+            <input type="password" id="password" required>
+
+            <button type="button" onclick="registerUser()">Register</button>
+        </form>
+        <script  >
+            function registerUser(){
+                const name = document.getElementById('username').value;
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('mobile').value;
+
+                const user = {
+                    name : username ,
+                    email : email ,
+                    password : password ,
+                    mobile : mobile,
+                }
+
+                const user_record = JSON.parse(localStorage.getItem("user")) || [];
+                user_record.push(user);
+                localStorage.setItem("user" , JSON.stringify(user_record));
+                alert("Registration Successfull");
+
+                window.location.href = 'datalist.html';
+            }
+        </script>
+    </body>
+</html>
