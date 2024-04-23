@@ -9,6 +9,7 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
+<<<<<<< HEAD
         <form id = "registrationForm">
             <h1>User Registration</h1>
             <label for ="username"> Username:</label>
@@ -30,12 +31,57 @@
                 const name = document.getElementById('username').value;
                 const email = document.getElementById('email').value;
                 const password = document.getElementById('mobile').value;
+=======
+        <form id="registrationForm">
+            <h1>User Registration</h1>
+        
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+        
+            <label for="mobile">Mobile number:</label>
+            <input type="tel" id="mobile" required>
+        
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+        
+            <label for="gender">Gender:</label>
+            <div id="gender">
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+            </div>
+        
+            <label for="age">Age:</label>
+            <input type="number" id="age">
+        
+            <button type="button" onclick="registerUser()">Register</button>
+        </form>
+        
+        <script>
+            function registerUser(){
+                const name = document.getElementById('username').value;
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+                const mobile = document.getElementById('mobile').value;
+                const age = document.getElementById('age').value;
+>>>>>>> d2af8ac (all codes)
 
                 const user = {
                     name : username ,
                     email : email ,
                     password : password ,
                     mobile : mobile,
+<<<<<<< HEAD
+=======
+                    age : age,
+
+>>>>>>> d2af8ac (all codes)
                 }
 
                 const user_record = JSON.parse(localStorage.getItem("user")) || [];

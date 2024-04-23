@@ -17,6 +17,16 @@ body {
 
 }
 
+<<<<<<< HEAD
+=======
+#gender input[type="radio"] 
+{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+>>>>>>> d2af8ac (all codes)
 label 
 {
     display: block;
